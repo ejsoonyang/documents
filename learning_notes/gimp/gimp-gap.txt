@@ -1,0 +1,7 @@
+1.新建素材.xcf和畫布00000.xcf.
+2.畫素材.
+3.畫布00000.xcf執行video->duplicate frames.
+4.畫布00000.xcf執行video->move path.
+5.move path窗口中,如衹用一帖素材則不要loop,點加point.
+6.畫布00000.xcf執行video->frames to image,注意gif的時間衹有此時可以更改.完成後新彈出xcf文件窗口.
+7.將新xcf導出gif文件即可.

@@ -1,0 +1,54 @@
+1.保留一個不帶數字結尾的多frames的xcf文檔在一個裝很多frames的文檔夾裡.
+2.可以隨意在想停的地方duplicate frames,gimp會自動遞增更名.
+3.下面的命令很有用,要記得去把0開頭改成1開頭.
+for x in {100001..1000312};do ?:done
+4.切出來改,最好用cp
+5.各種命令:
+(1)jpg圖片生成視頻
+mencoder "mf://*.jpg" -mf fps=24:type=jpg -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+(2)連接兩段avi
+mencoder -oac copy -ovc copy -idx -o output.avi input1.avi input2.avi
+(3)提取視頻中的音頻
+mencoder -ovc frameno  -oac mp3lame -ss 92 -endpos 8.5 w.mp4 -o output.mp3
+(3)把mp3添加至無聲的avi
+ffmpeg -i output/output.avi -i output.mp3 -vcodec copy -acodec copy output2.avi
+(4)剪切wav
+mplayer -ss 0 -endpos 44 *5.wav -ao pcm
+?6.有空試試pencil044b和avidemux,還有gimp裡的story board.
+?7.找到一個強大的音頻編輯軟體audacity...
+有空也都試試Radium
+還有Rosegarden和NoteEdit這兩個可以創作音樂的軟體.
+
+看來我的興趣在影音和寫寫畫畫上.
+
+555開始定格變黑
+581~821字幕
+從天台回到杭州的五個半小時，我彷彿衰老了五十五歲。我眼睜睜看著兩種生活環境的變遷，雙腳好似已不是自己的。長途汽車開動，山樹房屋後移，一首歌在腦海響起:'那年冬天你已經離開，我的心空出了一塊'。哼了幾遍，我終於難以抑制眼淚.可是一小時前的告別,我一臉的輕鬆,沒心沒肺.
+雲捲雲疏,細水長流.正是因為短暫,所以彌足珍貴.
+
+830黑完
+
+26~276歌詞
+8.30'   206幀(26~231)
+1	今年
+1	冬天
+1	你已經
+1	不在	
+1	我的心
+1	空出了
+1	一
+1.5	塊
+
+232~276歌詞消,黑幕
+
+半夜腰椎實在頂不住,準備把12複製出來,耶!....FEN!!!
+
+
+
+126.5
+111,43
+
+175,25
+160,63
+
+

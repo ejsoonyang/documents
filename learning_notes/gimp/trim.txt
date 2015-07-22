@@ -1,0 +1,3 @@
+Color->Componet->Decompose
+filters->enhance->despeckle
+Color->thresold
