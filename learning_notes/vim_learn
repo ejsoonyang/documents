@@ -1,0 +1,36 @@
+搜尋選中字詞:
+v:select
+y:copy
+q/:edit your command
+p:paste selection
+
+十六進制:
+:%!xxd
+返回:
+:%!xxd -r
+
+
+
+比較兩個文檔:
+vi -d file1 file2
+若已打開file1:
+:vert diffsplit file2
+已打開兩文檔想比較:
+:diffthis
+
+刷新比較:
+:diffupdate
+定位:
+[c	前一個
+]c	後一個
+在不同的窗口跳轉:
+ctrl+w w
+ctrl+w h/j/k/l
+合併文檔:
+dp	將差異併至另一文檔
+do	將另一文檔的差異併至本文檔
+設置上下文行數:
+:set diffopt=context:3
+光標停在摺疊處對其進行展開或摺疊:
+zo	展開
+zc	摺疊
