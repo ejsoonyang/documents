@@ -1,0 +1,4 @@
+linux批量文檔操作
+l | while read dir; do sudo  mv $dir ..; done
+for x in {2004..4993};do rm -f DSC_$x;done
+$裡面的計算要用[ ]括進去
