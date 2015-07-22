@@ -1,0 +1,71 @@
+一、启动播放时参数：
+
+在终端下敲入：./mplayer  提示各种使用帮助信息 
+
+ -vo <drv[:dev]> 选择视频输出模式和设备(用'-vo help'查看列表)
+ -ao <drv[:dev]> 选择音频输出模式和设备(用'-ao help'查看列表)
+ -ss <timepos>   寻找指定的(多少秒或hh:mm:ss)位置
+ -nosound        不播放声音
+ -fs -vm -zoom   全屏播放选项(fullscr,vidmode chg,softw.scale)
+ -x <x> -y <y>   设置播放的分辨率(用于改变vidmode或软件缩放)
+ -sub <file>     指定使用的字幕文件(参见-subfps, -subdelay)
+ -playlist <file> 指定使用播放列表文件
+ -vid x -aid y   选择用于播放的视频(x)和音频(y)流
+ -fps x -srate y 改变视频(x fps)和音频(y Hz)率
+ -pp <quality>   使用后期处理滤镜(详细内容参见manpage/docs)
+ -framedrop      使用 frame-dropping (用于慢机器)
+
+二、播放时控制键
+基本控制键: (完整的列表参见manpage, 同时也要检查一下 input.conf)
+ <-  or  ->      向后/向前搜索10秒
+ up or down      向后/向前搜索1分钟
+ pgup or pgdown  向后/向前搜索10分钟
+ < or >          跳到播放列表中的前一首/下一首
+ p or SPACE      暂停播放(按任意键继续)
+ q or ESC        停止播放并推出
+ + or -          调整音频延迟+/-0.1秒
+ o               循环OSD模式:  none/seekbar/seekbar+timer
+ * or /          增加或减少pcm音量
+ z or x          调整字幕延迟+/-0.1秒
+
+ r or t          上/下调整字幕位置, 参见-vf expand!
+
+
+
+三、mplayer的使用实例：
+
+   #mplayer filename(PC版)
+
+   #./mplayer -ac mad filename（ARM版） 
+            //即可播放音频，经测试过可播放 .mp3  .wmv .mgp .mp4等格式的音视频
+
+   #./mplayer -ss 10                  
+
+//从第10s开始播放
+
+   #./mplayer  -ss  00:01:00        
+
+//从第1分钟开始播放 
+
+   #./mplayer -fs -zoom -x 160 -y  120  
+
+//以160*120大小居中播放视频
+
+    //-fs 配合-zoom 居中播放， -zoom -x 宽度 -y 高度  指定播放窗口的宽度与高度 
+   #mplayer filename -caceh 8192
+
+            //-caceh 8192 设置缓存为8M
+
+   #./mplayer -loop 5 file
+
+   //-loop 5 让这个文件循环播放5遍，如果为0就表示不停的播放。
+
+   #ls /video/tom/*.avi > tom.lst
+
+//制作一个文件播放列表
+
+   #mplayer -playerlist tom.lst -shuffle
+
+//-playerlist 指定播放列表、-shuffle 指定随机播放
+
+   #./mplayer -ac mad -vop rotate=1 matrix.mpg 旋转90度

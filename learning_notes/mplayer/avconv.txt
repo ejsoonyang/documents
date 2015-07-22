@@ -1,0 +1,3 @@
+http://libav.org/
+avconv -codecs
+avconv -i input.sam -acodec ac3 output.ac3

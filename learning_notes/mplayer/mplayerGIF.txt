@@ -1,0 +1,18 @@
+How to create an animated gif from a video using mplayer
+
+Animated gifs are EVERYWHERE on the internet. If you didn't know how already, the creation of an animated gif is quite simple on Linux using mplayer from the command line.
+
+Step 1: Preview the gif
+
+CODE: mplayer -ao null -ss 0:03:33 -endpos 15 filename.mpg
+
+What it means:
+mplayer -ao null -ss 0:03:33 [Startposition h:mm:ss] -endpos 15 [duration of gif] filename.mpg [Name of video file]
+
+Step 2: Create the output
+
+CODE: mplayer filename -ao null -ss 0:04:15 -endpos 15 -vo gif89a:fps=13:output=animated.gif -vf scale=240:180
+
+What it means:
+mplayer filename [Name of video file]-ao null -ss 0:04:15 [Startposition h:mm:ss] -endpos 15 [duration of gif] -vo gif89a:fps=13 [frames per second]:output=animated.gif [Name of ouput file] -vf scale=240:180 [Dimensions of gif file]
+

@@ -1,0 +1,10 @@
+[剪輯ogg](ffmpeg將要過時)
+avconv -i Kage-70.ogg -t 77 -c copy Kage-704.ogg
+avconv -i Cho.wav -c:a libvorbis -t 77 -b:a 64k ff6.ogg
+
+[ogv2mpg]
+ffmpeg -i input.ogv -r 30 output.mpg
+
+[剪輯DVD]
+ffmpeg -i input_file -ss hh:mm:ss -t hh:mm:ss -acodec copy -ab 192k output_file
+可輸出為mp4

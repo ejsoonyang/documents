@@ -1,0 +1,10 @@
+mplayer -ao null <video file name> -vo jpeg:outdir=output
+
+mencoder "mf://output/*.jpg" -mf fps=25 -o output.avi -ovc lavc
+or
+mencoder "mf://output/*.jpg" -mf fps=25 -o output.avi -ovc x264
+
+ffmpeg -ss 10 -t 12 audio.mp3 output.mp3
+
+ffmpeg -i output/output.avi -i output.mp3 -vcodec copy -acodec copy output2.avi
+

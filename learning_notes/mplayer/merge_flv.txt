@@ -1,0 +1,2 @@
+mencoder -oac pcm -ovc copy -idx -o output.flv x.flv y.flv z.flv
+mencoder -oac pcm -ovc copy -idx -o 棋魂-第集.flv *.flv
