@@ -1,0 +1,1 @@
+ls --width=1 | while read file_name; do chmod 000 "$file_name"; done 
