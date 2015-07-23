@@ -1,0 +1,3 @@
+一.地形拉伸,要進入edit mode,選擇proportional->enable,這樣才可以多點/面拉伸出一個地形.
+二.texture要有一個指定的修飾屬性,如meterial.
+三,選中某物,按ww,出現選單.(目前不知此功能點哪一個選單同效.)

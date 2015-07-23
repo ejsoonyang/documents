@@ -1,0 +1,4 @@
+crop a picture:colors->component->decompose|colors->threshold.
+Pixelate is in the filters->blur, softglow is in the filters->artistic.
+
+Every layer has a opacity attribution.
