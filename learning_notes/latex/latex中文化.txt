@@ -1,0 +1,33 @@
+中文化(report)
+一,目錄與章節
+717:\newcommand\contentsname{目~錄}
+725:\newcommand\chaptername{第~\thechapter ~章}
+365:\huge\bfseries \@chapapp\space %\thechapter
+注釋619-633,634增加:
+\newcommand*\l@chapter{\@dottedtocline{0}{0em}{2.3em}}
+二,日期格式
+728:
+\def\today{\number\year 年
+\ifcase\month\or
+  1月\or 2月\or 3月\or 4月\or 5月\or 6月\or
+  7月\or 8月\or 9月\or 10月\or 11月\or 12月\fi
+  \space\number\day 日}
+
+
+
+
+個性化
+\documentclass[12pt,a4paper]{report}
+\usepackage{xeCJK}
+\setCJKmainfont[ItalicFont={TW-Kai},BoldFont={Microsoft JhengHei}]{TW-Sung}
+
+\usepackage{indentfirst}
+\parindent = 24pt
+\parskip = 8pt
+\usepackage{setspace}
+\setstretch{1.5}
+
+
+
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{結語}
