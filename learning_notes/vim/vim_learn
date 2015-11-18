@@ -9,15 +9,12 @@ p:paste selection
 返回:
 :%!xxd -r
 
-
-
 比較兩個文檔:
 vi -d file1 file2
 若已打開file1:
 :vert diffsplit file2
 已打開兩文檔想比較:
 :diffthis
-
 刷新比較:
 :diffupdate
 定位:
